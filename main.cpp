@@ -8,7 +8,20 @@ using namespace std;
 
 void Fun1(const string& filename, vector<string>& vect) //Чтение строк в вектор
 {
+    ifstream in;
+    in.open("Text1.txt");
+    if (!in.is_open())
+    {
+        wcout << L"Файл не открылся" << endl;
+        return;
+    }
 
+    string stroka;
+    while (getline(in, stroka))
+    {
+        vect.push_back(stroka);
+    }
+    // хочу шашлык
 }
 
 void Fun2(vector<string>& vect) //Дополнительная обработка данных
