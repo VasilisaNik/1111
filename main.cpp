@@ -26,7 +26,10 @@ int Fun4(vector<string>& vect) //Подсчет количества строк 
 
 void Fun5(vector<string>& vect) //Вывод строк на экран
 {
-
+    for (const auto& line : vect)
+    {
+        cout << line << endl;
+    }
 }
 
 
