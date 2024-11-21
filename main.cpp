@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
+#include <fstream>
 
 using namespace std;
 
@@ -11,6 +13,17 @@ void Fun1(const string& filename, vector<string>& vect) //Чтение стро�
 
 void Fun2(vector<string>& vect) //Дополнительная обработка данных
 {
+    int N = vect.size();
+    for(int i = 0; i < N-1; i++)
+    {
+        for(int j = N-2; j >= i; j--)
+        {
+            if(vect[j] > vect[j+1])
+            {
+                swap (vect[j], vect[j+1]);
+            }
+        }
+    }
 
 }
 
@@ -19,7 +32,7 @@ void Fun3(const string& filename, vector<string>& vect) //Запись в фай
 
 }
 
-int Fun4(vector<string>& lvect) //Подсчет количества строк в векторе
+int Fun4(vector<string>& vect) //Подсчет количества строк в векторе
 {
 
 }
