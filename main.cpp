@@ -19,9 +19,9 @@ void Fun3(const string& filename, vector<string>& vect) //Запись в фай
 
 }
 
-int Fun4(vector<string>& lvect) //Подсчет количества строк в векторе
+int Fun4(vector<string>& vect) //Подсчет количества строк в векторе
 {
-
+    return vect.size();
 }
 
 void Fun5(vector<string>& vect) //Вывод строк на экран
@@ -40,8 +40,8 @@ int main()
     Fun3("Text2.txt", vect);
     Fun2(vect);
 
-    int lineCount = Fun4(vect);
-    wcout << L"Количество строк: " << lineCount << endl;
+    int lcount = Fun4(vect);
+    wcout << L"Количество строк: " << lcount << endl;
 
     return 0;
 
