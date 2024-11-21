@@ -1,12 +1,25 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
 void Fun1(const string& filename, vector<string>& vect) //Чтение строк в вектор
 {
+    ifstream in;
+    in.open("Text1.txt");
+    if (!in.is_open())
+    {
+        wcout << L"Файл не открылся" << endl;
+        return;
+    }
 
+    string stroka;
+    while (getline(in, stroka))
+    {
+        vect.push_back(stroka);
+    }
 }
 
 void Fun2(vector<string>& vect) //Дополнительная обработка данных
@@ -19,7 +32,7 @@ void Fun3(const string& filename, vector<string>& vect) //Запись в фай
 
 }
 
-int Fun4(vector<string>& lvect) //Подсчет количества строк в векторе
+int Fun4(vector<string>& vect) //Подсчет количества строк в векторе
 {
 
 }
