@@ -29,7 +29,19 @@ void Fun2(vector<string>& vect) //Дополнительная обработк�
 
 void Fun3(const string& filename, vector<string>& vect) //Запись в файл
 {
-
+    ofstream out("Text2.txt");
+    if (out.is_open())
+    {
+        for (auto& str : vect)
+        {
+            out << str << endl;
+        }
+        out.close();
+    }
+    else
+    {
+        wcout << L"Ошибка при открытии файла для записи:" << endl;
+    }
 }
 
 int Fun4(vector<string>& vect) //Подсчет количества строк в векторе
