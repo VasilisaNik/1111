@@ -20,6 +20,7 @@ void Fun1(const string& filename, vector<string>& vect) //Чтение стро�
     {
         vect.push_back(stroka);
     }
+    // хочу шашлык
 }
 
 void Fun2(vector<string>& vect) //Дополнительная обработка данных
